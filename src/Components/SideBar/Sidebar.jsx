@@ -9,15 +9,22 @@ import {
   WatchLater,
 } from "@mui/icons-material";
 import "./Sidebar.css";
+import { useNavigate } from "react-router-dom";
 
 const Sidebar = () => {
+  const Navigaters = useNavigate();
+
+  const HomeRedirect = () => {
+    console.log("werwerwer");
+    Navigaters("/");
+  };
   return (
     <div className="Sidebar">
       {/* TOP SIDE BAR OF THE WEBSITE  */}
 
       <div className="Sidebar_buttons">
         <div className="Sidebar_btn active">
-          <Home className="Sidebar_icon" />
+          <Home className="Sidebar_icon" onClick={HomeRedirect} />
           <p>Home</p>
         </div>
 

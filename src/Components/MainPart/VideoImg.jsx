@@ -7,9 +7,6 @@ const VideoImg = () => {
   const Imgredirect = () => {
     Navigaters("/watch");
   };
-  const AvatarRedirct = () => {
-    Navigaters("/previewchannel");
-  };
 
   return (
     <div className="VideoImg">
@@ -20,7 +17,7 @@ const VideoImg = () => {
         alt="thumbnail"
       />
       <div className="VideoImg_details">
-        <Avatar onClick={AvatarRedirct} />
+        <Avatar />
         <div className="VideoImg_channel">
           <h1 className="VideoImg_title">
             Create Your own Youtube like website
