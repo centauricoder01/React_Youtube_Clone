@@ -1,17 +1,26 @@
 import React from "react";
 import { Avatar } from "@mui/material";
-import { Navigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const VideoImg = () => {
+  const Navigaters = useNavigate();
+  const Imgredirect = () => {
+    Navigaters("/watch");
+  };
+  const AvatarRedirct = () => {
+    Navigaters("/previewchannel");
+  };
+
   return (
     <div className="VideoImg">
       <img
+        onClick={Imgredirect}
         className="VideoImg_thumbNail"
         src="https://parispeaceforum.org/wp-content/uploads/2021/10/NET-ZERO-SPACE-INITIATIVE-1.png"
         alt="thumbnail"
       />
       <div className="VideoImg_details">
-        <Avatar />
+        <Avatar onClick={AvatarRedirct} />
         <div className="VideoImg_channel">
           <h1 className="VideoImg_title">
             Create Your own Youtube like website
