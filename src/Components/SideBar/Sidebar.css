@@ -1,0 +1,43 @@
+.Sidebar{
+    width: 300px;
+    background-color: #202020;
+    height: 91.5vh;
+}
+
+.Sidebar_btn{
+    display : flex;
+    padding: 15px 20px;
+    cursor: pointer;
+    align-items: center;
+}
+
+.Sidebar_btn > .Sidebar_icon{
+    opacity: 0.5;
+}
+
+.Sidebar_btn >p{
+    opacity: 0.9;
+    font-weight: 400 !important;
+    font-size: 0.9rem;
+}
+
+.active > .Sidebar_icon, .active > p{
+    opacity: 1 !important;
+}
+
+.active, .Sidebar_btn:hover{
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.Sidebar_icon{
+    margin-right: 20px;
+}
+
+.Sidebar_buttons{
+    padding-bottom: 20px;
+    border-bottom: 1px solid #303030;
+}
+
+.bottom{
+    margin-top: 10px;
+}
