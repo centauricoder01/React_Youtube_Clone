@@ -10,6 +10,7 @@ import {
   ThumbUpAlt,
 } from "@mui/icons-material";
 import { Avatar, Button } from "@mui/material";
+import { RightSide } from "..";
 
 const Watching = () => {
   return (
@@ -103,6 +104,26 @@ const Watching = () => {
               <p className="watch_showMore">SHOW MORE</p>
             </div>
           </div>
+        </div>
+        <div className="watch_right">
+          {/* Here we will add side bar of the website  */}
+          <RightSide />
+          <RightSide />
+          <RightSide />
+          <RightSide />
+          <RightSide />
+          <RightSide />
+          <RightSide />
+          <RightSide />
+          <RightSide />
+          <RightSide />
+          <RightSide />
+          <RightSide />
+          <RightSide />
+          <RightSide />
+          <RightSide />
+          <RightSide />
+          <RightSide />
         </div>
       </div>
     </div>

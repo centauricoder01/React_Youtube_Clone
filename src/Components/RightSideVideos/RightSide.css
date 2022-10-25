@@ -1,0 +1,43 @@
+.RightSide{
+    display: flex;
+    width: 30vw;
+    margin-top: 10px;
+    min-height: 90px;
+    max-height: 90px;
+    height: 90px;
+    cursor: pointer;
+}
+
+.RightSide:first-of-type{
+    margin-top: 0px;
+}
+
+.Rightside_left{
+    width: 10vw;
+    margin-right: 10px;
+}
+
+.RightSide_thumbnail{
+    width: inherit;
+    height: 90px;
+}
+
+.RightSide_right{
+    margin-right: 20px;
+    max-width: 220px;
+}
+
+.RightSide_title{
+    font-weight: 500;
+    font-size: 15px;
+    letter-spacing: 0.01px;
+}
+
+.RightSide_texts{
+    margin-top: 5px !important;
+    align-self: bottom;
+}
+
+.RightSide_texts > p{
+    font-size: 13px !important;
+}
