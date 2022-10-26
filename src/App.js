@@ -1,5 +1,5 @@
 import React from "react";
-import {Header, SideBar, Main, Watching} from "./Components"
+import {Header, SideBar, Main, Watching, Login, SignUp} from "./Components"
 import {
   Routes,
   Route,
@@ -7,18 +7,27 @@ import {
 
 const App = () => {
   return (
-    <div className="Home">
-    <Header />
-    <Routes>
-      <Route path="/" element={
-          <div className="app">
-          <SideBar />
-          <Main/> 
-          </div>
-      } />
-      <Route path="/watch" element={<Watching />} />
-    </Routes>
-        </div>
+        <Routes>
+          <Route path="/" element={
+            <div className="Home">
+              <Header />
+              <div className="app">
+              <SideBar />
+              <Main/> 
+              </div>
+              </div>
+          } />
+          <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<SignUp />}/>
+          <Route path="/watch" element={
+              <div className="Home">
+              <Header />
+              <div className="app">
+              <Watching />
+              </div>
+              </div>
+          } />
+        </Routes>
   );
 };
 

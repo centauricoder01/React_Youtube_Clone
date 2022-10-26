@@ -3,21 +3,42 @@ import {Menu, Search, Apps, Notifications, VideoCall, PersonAddOutlined} from "@
 import {Button, Avatar, Popover} from "@mui/material"
 import logo from "../../assets/logo1.png"
 import "./Styles.css"
-
+import { useNavigate } from "react-router-dom";
+import { useEffect } from 'react'
 
 
 const Header = () => {
+
+  const Navigaters = useNavigate()
 
   const [anchorEl, setAnchorEl] = useState(null);
   const handleClick = (event) =>{
     setAnchorEl(event.currentTarget)
   }
+
   const handleClose = () =>{
       setAnchorEl(null)
   }
 
+  const HomeRedirect = () => {
+    console.log("werwerwer");
+    Navigaters("/signup");
+  };
+
   const open  = Boolean(anchorEl)
   const id = open ? "simple-popover" : undefined;
+
+  let localstorageData = JSON.parse(localStorage.getItem("userInfo")) || [];
+
+  // SIGNOUT FUNCTION 
+
+  const SignOutFunc =() =>{
+      localStorage.clear();
+  }
+
+  // useEffect(()=>{
+    
+  // },SignOutFunc)
 
   return (
     <div className='header'>
@@ -35,7 +56,13 @@ const Header = () => {
             <VideoCall/>
             <Apps/>
             <Notifications />
-            <Avatar onClick={handleClick} />
+            {
+               localstorageData.length !== 0 ? <Avatar onClick={handleClick} alt={ localstorageData.length !== 0 ?localstorageData.name.toUpperCase() : null} /> : <Button  variant="outlined" className='Header_signIn' onClick={HomeRedirect} >
+                <Avatar className='signIn_Avatar' sx={{ width: 30, height: 30 }} />
+                <p>Sign In</p>
+              </Button>
+              
+            }
             {/* POP PART OF THE WEBSITE  */}
             <Popover open={open} id={id} onClose={handleClose} anchorEl={anchorEl}   anchorOrigin={{
               vertical: 'bottom',
@@ -48,16 +75,19 @@ const Header = () => {
               {/* MAIN HTML OF THE POP OVER  */}
               <div className="home_popoverContainer">
                 <div className="home_popover_top">
-                    <Avatar className='header_avatar' alt="Remy Sharp"
-  src="/static/images/avatar/1.jpg"
-  sx={{ width: 70, height: 70 }} />
+                    <Avatar className='header_avatar' alt={ localstorageData.length !== 0 ?localstorageData.name.toUpperCase() : null}
+                      sx={{ width: 70, height: 70 }} />
                   {/* Main part of the Popout Html  */}
                   <div className="home_text">
                     <div className="home_displayName">
-                      Rajendra Patel
+                      {
+                        localstorageData.length !== 0 ? localstorageData.name : null
+                      }
                     </div>
                     <div className="home_mail">
-                        rajendraPatelofficial@gmail.com
+                        {
+                        localstorageData.length !== 0 ? localstorageData.email : null
+                      }
                     </div>
                   </div>
                   {/* second part */}
@@ -66,7 +96,7 @@ const Header = () => {
                   <div className="home_addBtn">
                     <PersonAddOutlined className='home_addIcon' />
                   </div>
-                  <Button variant='outlined' className='home_signOut'>
+                  <Button variant='outlined' className='home_signOut' onClick={SignOutFunc}>
                     Sign Out
                   </Button>
                   <div className="home_popover_footer">
