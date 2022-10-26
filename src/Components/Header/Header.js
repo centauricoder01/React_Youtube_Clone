@@ -3,8 +3,7 @@ import {Menu, Search, Apps, Notifications, VideoCall, PersonAddOutlined} from "@
 import {Button, Avatar, Popover} from "@mui/material"
 import logo from "../../assets/logo1.png"
 import "./Styles.css"
-import { useNavigate } from "react-router-dom";
-import { useEffect } from 'react'
+import {  useNavigate } from "react-router-dom";
 
 
 const Header = () => {
@@ -21,24 +20,22 @@ const Header = () => {
   }
 
   const HomeRedirect = () => {
-    console.log("werwerwer");
     Navigaters("/signup");
   };
 
   const open  = Boolean(anchorEl)
   const id = open ? "simple-popover" : undefined;
 
-  let localstorageData = JSON.parse(localStorage.getItem("userInfo")) || [];
 
   // SIGNOUT FUNCTION 
 
   const SignOutFunc =() =>{
       localStorage.clear();
+      Navigaters('/signup')
   }
+  let localstorageData = JSON.parse(localStorage.getItem("userInfo")) || [];
 
-  // useEffect(()=>{
-    
-  // },SignOutFunc)
+  // geting ramdom person image 
 
   return (
     <div className='header'>
@@ -57,7 +54,8 @@ const Header = () => {
             <Apps/>
             <Notifications />
             {
-               localstorageData.length !== 0 ? <Avatar onClick={handleClick} alt={ localstorageData.length !== 0 ?localstorageData.name.toUpperCase() : null} /> : <Button  variant="outlined" className='Header_signIn' onClick={HomeRedirect} >
+               localstorageData.length !== 0 ? <Avatar onClick={handleClick} alt={ localstorageData.length !== 0 ?localstorageData.name.toUpperCase() : null}
+                    src="https://media-exp1.licdn.com/dms/image/D4D03AQEnK37DqEmQVA/profile-displayphoto-shrink_400_400/0/1666328440907?e=1672272000&v=beta&t=iWA6rkRSL_jQZ_00p51af3As58hSGLjVZzmOt0Eh" /> : <Button  variant="outlined" className='Header_signIn' onClick={HomeRedirect} >
                 <Avatar className='signIn_Avatar' sx={{ width: 30, height: 30 }} />
                 <p>Sign In</p>
               </Button>
@@ -76,6 +74,7 @@ const Header = () => {
               <div className="home_popoverContainer">
                 <div className="home_popover_top">
                     <Avatar className='header_avatar' alt={ localstorageData.length !== 0 ?localstorageData.name.toUpperCase() : null}
+                    src="https://media-exp1.licdn.com/dms/image/D4D03AQEnK37DqEmQVA/profile-displayphoto-shrink_400_400/0/1666328440907?e=1672272000&v=beta&t=iWA6rkRSL_jQZ_00p51af3As58hSGLjVZzmOt0Eh"
                       sx={{ width: 70, height: 70 }} />
                   {/* Main part of the Popout Html  */}
                   <div className="home_text">

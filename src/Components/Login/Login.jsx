@@ -35,7 +35,9 @@ const Login = () => {
         alert("Welcome Back sir.");
         usenavigate("/");
       } else {
-        alert("You have entered wrong password");
+        alert("Please Enter Right Details");
+        getdata.gmail = "";
+        getdata.password = "";
       }
     }
   };

@@ -4,6 +4,7 @@ import {
   Routes,
   Route,
 } from "react-router-dom";
+import PrivateRoutes from "./Authentication/PrivateRoutes";
 
 const App = () => {
   return (
@@ -20,12 +21,14 @@ const App = () => {
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<SignUp />}/>
           <Route path="/watch" element={
+            <PrivateRoutes>
               <div className="Home">
               <Header />
               <div className="app">
               <Watching />
               </div>
               </div>
+             </PrivateRoutes>
           } />
         </Routes>
   );
