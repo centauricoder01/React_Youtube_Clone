@@ -53,3 +53,83 @@ align-items: center;
     opacity: 0.2;
     color: #fff;
 }
+
+
+/* POP OVER STYLING PART OF THE WEBSITE  */
+
+.MuiPopover-paper{
+    max-width: calc(100vh - 62px - 100px);
+    width: 354px;
+    margin-top: 20px;
+    margin-right: -10px;
+    height: 390px;
+}
+
+.home_popoverContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.home_popover_top{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: 1px solid #dadce0;
+    width: 120%;
+    height: 190px;
+}
+
+.home_badge{
+    background: #fff;
+    color: #5f6368;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+}
+
+.home_camera{
+    width: 17px !important;
+    height: 17px !important;
+    margin: 4px;
+    box-sizing: 0px 1px 1px 0 rgba(72, 71, 71, 0.342),
+    0px 1px 3px 1px rgba(65,69,73,0.15);
+    border-radius: 50%;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.home_camera:hover{
+    color: #b2b2ffad;
+}
+
+.home_text{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 15px;
+    color: rgba(51, 51, 51, 0.635);
+}
+
+.home_displayName{
+    font-family: "Popins", sans-serif;
+    color: #202124;
+    font-weight: 500;
+    letter-spacing: -0.2px;
+}
+
+.home_mail{
+    margin-top: 10px;
+}
+
+.home_popover_footer{
+    display: flex;
+    gap: 4px;
+}
+
+.home_popover_btm{
+    text-align: center;
+    line-height:40px;
+    margin-top: 10px;
+}
