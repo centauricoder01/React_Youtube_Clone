@@ -11,8 +11,10 @@ import {
 } from "@mui/icons-material";
 import { Avatar, Button } from "@mui/material";
 import { RightSide } from "..";
+import { useState } from "react";
 
 const Watching = () => {
+  const [showmore, setShowmore] = useState(false);
   return (
     <div className="watch">
       <div className="watch_wrap">
@@ -95,13 +97,24 @@ const Watching = () => {
             </div>
             {/* DESCRIPTION PART OF THE WEBSITE  */}
             <div className="watch_description">
-              <p>
+              <p
+                style={{
+                  maxHeight: showmore && "100%",
+                }}
+              >
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nemo
                 veniam quae enim veritatis, suscipit temporibus et beatae hic,
                 nulla repudiandae nam nobis autem, voluptatem omnis eveniet
-                excepturi animi tenetur quaerat!
+                excepturi animi tenetur quaerat! Lorem ipsum dolor sit amet
+                consectetur, adipisicing elit. Dolorem, doloribus earum. Quo
+                possimus inventore unde molestias, eaque quis ut laboriosam.
               </p>
-              <p className="watch_showMore">SHOW MORE</p>
+              <p
+                className="watch_showMore"
+                onClick={() => setShowmore(!showmore)}
+              >
+                SHOW {showmore ? "LESS" : "MORE"}
+              </p>
             </div>
           </div>
         </div>

@@ -1,5 +1,6 @@
-.Main{
-    display: flex;
+.Main {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
     flex-wrap: wrap;
     overflow-y: auto;
     max-height: 90vh;
@@ -7,24 +8,25 @@
     overflow-x: hidden;
 }
 
-.VideoImg_thumbNail{
+.VideoImg_thumbNail {
     width: inherit;
-    height: 137px;
+    height: 187px;
     margin-bottom: 10px;
 }
-.VideoImg_details{
+
+.VideoImg_details {
     display: flex;
 }
 
-.VideoImg{
+.VideoImg {
     margin: 20px;
     margin-right: 0;
-    width: 230px;
+    width: 285px;
     height: 236px;
     cursor: pointer;
 }
 
-.VideoImg_title{
+.VideoImg_title {
     font-size: 0.9rem;
     max-height: 42px;
     overflow: hidden;
@@ -34,15 +36,15 @@
     letter-spacing: 0.1px;
 }
 
-.VideoImg_channel{
+.VideoImg_channel {
     margin-left: 10px;
 }
 
-.VideoImg_texts{
+.VideoImg_texts {
     margin-top: 5px;
 }
 
-.VideoImg_text{
+.VideoImg_text {
     font-size: 14px;
     color: #aaaaaa;
 }
