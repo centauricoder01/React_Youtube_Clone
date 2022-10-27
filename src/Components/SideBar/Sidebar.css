@@ -1,7 +1,13 @@
+body{
+    position: relative;
+}
 .Sidebar{
-    width: 300px;
+    width: 260px;
     background-color: #202020;
-    height: 91.5vh;
+    height: 100%;
+    position: fixed;
+    z-index: 10;
+    margin-top: 3.6rem;
 }
 
 .Sidebar_btn{

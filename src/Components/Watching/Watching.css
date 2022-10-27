@@ -1,13 +1,14 @@
 .watch{
     display: flex;
     justify-content: center;
-    margin-top: 20px;
+    margin-top: 80px;
     width: 100vw;
     align-items: center;
 }
 
 .watch_wrap{
     display: flex;
+    position: relative;
 }
 
 .watch_left{
@@ -15,6 +16,7 @@
     flex-direction: column;
     margin-right: 20px;
     margin-left: 20px;
+    /* position: fixed; */
 }
 
 .watch_video{

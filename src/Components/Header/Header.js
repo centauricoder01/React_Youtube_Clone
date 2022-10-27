@@ -4,11 +4,19 @@ import {Button, Avatar, Popover} from "@mui/material"
 import logo from "../../assets/logo1.png"
 import "./Styles.css"
 import {  useNavigate } from "react-router-dom";
+import Dialog from "@mui/material/Dialog";
+import DialogActions from "@mui/material/DialogActions";
+import DialogContent from "@mui/material/DialogContent";
+import DialogContentText from "@mui/material/DialogContentText";
+import DialogTitle from "@mui/material/DialogTitle";
+
 
 
 const Header = () => {
 
   const Navigaters = useNavigate()
+
+  const [SearchData , setSearchData] = useState('')
 
   const [anchorEl, setAnchorEl] = useState(null);
   const handleClick = (event) =>{
@@ -35,32 +43,76 @@ const Header = () => {
   }
   let localstorageData = JSON.parse(localStorage.getItem("userInfo")) || [];
 
-  // geting ramdom person image 
+  const HandleInputValue = ()=>{
+    console.log(SearchData)
+  }
 
+
+  // POP DIALOG FUNCTION OF THE WEBSITE 
+
+  const [opens, setOpen] = React.useState(false);
+
+  const handleClickOpen = () => {
+    setOpen(true);
+  };
+
+  const handleCloses = () => {
+    setOpen(false);
+  };
+ 
   return (
     <div className='header'>
         <div className="header_left">
             <Menu className='Header_MenuIcons' />
-            <img className = "Header_Logo" src={logo} alt="Youtube" />
+            <img className = "Header_Logo" src={logo} alt="Youtube" onClick={()=>{Navigaters("/")}} />
         </div>
         <form className='header_center'>
-            <input type="text" className='Header_input' placeholder='Search' />
-            <Button className="Header_btn">
+            
+            <input type="text" className='Header_input' placeholder='Search' value={SearchData} onChange={(e)=>{
+              setSearchData(e.target.value)
+            }} />
+            <Button className="Header_btn" onClick={HandleInputValue}>
                 <Search className="Header_searchIcon" />
                 </Button>
         </form>
         <div className="Header_Right">
-            <VideoCall/>
-            <Apps/>
-            <Notifications />
+            <VideoCall onClick={handleClickOpen}/>
+            <Apps onClick={handleClickOpen}/>
+            <Notifications onClick={handleClickOpen}/>
             {
                localstorageData.length !== 0 ? <Avatar onClick={handleClick} alt={ localstorageData.length !== 0 ?localstorageData.name.toUpperCase() : null}
                     src="https://media-exp1.licdn.com/dms/image/D4D03AQEnK37DqEmQVA/profile-displayphoto-shrink_400_400/0/1666328440907?e=1672272000&v=beta&t=iWA6rkRSL_jQZ_00p51af3As58hSGLjVZzmOt0Eh" /> : <Button  variant="outlined" className='Header_signIn' onClick={HomeRedirect} >
                 <Avatar className='signIn_Avatar' sx={{ width: 30, height: 30 }} />
                 <p>Sign In</p>
               </Button>
-              
             }
+
+{/* POP DIALOG OF THE WEBSITE  */}
+
+      <Dialog
+        open={opens}
+        onClose={handleCloses}
+        aria-labelledby="alert-dialog-title"
+        aria-describedby="alert-dialog-description"
+      >
+        <DialogTitle id="alert-dialog-title">
+          {"Developer Request to the User"}
+        </DialogTitle>
+        <DialogContent>
+          <DialogContentText id="alert-dialog-description">
+            Developer is working on this Feature, Please Wait For some time.
+          </DialogContentText>
+        </DialogContent>
+        <DialogActions>
+          <Button onClick={handleCloses}>Ok,I will wait.</Button>
+          <Button onClick={handleCloses} autoFocus>
+            Give me fast.
+          </Button>
+        </DialogActions>
+      </Dialog>
+
+{/* POP DIALOG OF THE WEBSITE */}
+
             {/* POP PART OF THE WEBSITE  */}
             <Popover open={open} id={id} onClose={handleClose} anchorEl={anchorEl}   anchorOrigin={{
               vertical: 'bottom',

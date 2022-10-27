@@ -1,43 +1,48 @@
+
 .Main {
+    display: flex;
+    gap: 15rem;
+}
+
+.VideoImg {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+.firstMain{
+    margin-top: none;
+}
+
+.secondMain{
     display: grid;
     grid-template-columns: repeat(4,1fr);
-    flex-wrap: wrap;
-    overflow-y: auto;
-    max-height: 90vh;
-    width: 100%;
-    overflow-x: hidden;
+    gap: 1.5rem;
+    margin: 2rem;
+    margin-top: 4.6rem;
 }
 
 .VideoImg_thumbNail {
-    width: inherit;
-    height: 187px;
-    margin-bottom: 10px;
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    
+}
+.VideoImg_channel {
+    margin-left: 10px;
+}
+.VideoImg_title {
+    max-height: 43px;
+    overflow: hidden;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 20px;
+    color: rgb(255, 255, 255);
+    margin-top: 6px;
 }
 
 .VideoImg_details {
     display: flex;
-}
-
-.VideoImg {
-    margin: 20px;
-    margin-right: 0;
-    width: 285px;
-    height: 236px;
-    cursor: pointer;
-}
-
-.VideoImg_title {
-    font-size: 0.9rem;
-    max-height: 42px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: wrap;
-    font-weight: 500;
-    letter-spacing: 0.1px;
-}
-
-.VideoImg_channel {
-    margin-left: 10px;
 }
 
 .VideoImg_texts {
@@ -47,4 +52,4 @@
 .VideoImg_text {
     font-size: 14px;
     color: #aaaaaa;
-}
+}  

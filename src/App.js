@@ -1,11 +1,11 @@
 import React from "react";
-import {Header, SideBar, Main, Watching, Login, SignUp} from "./Components"
+import {Header, Main, Watching, Login, SignUp} from "./Components"
 import {
   Routes,
   Route,
 } from "react-router-dom";
 import PrivateRoutes from "./Authentication/PrivateRoutes";
-
+import "./index.css"
 const App = () => {
   return (
         <Routes>
@@ -13,7 +13,6 @@ const App = () => {
             <div className="Home">
               <Header />
               <div className="app">
-              <SideBar />
               <Main/> 
               </div>
               </div>

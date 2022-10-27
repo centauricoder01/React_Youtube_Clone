@@ -13,8 +13,7 @@ body{
 }
 
 .app{
-    display: flex;
-
+    display: grid;
 }
 .Home{
     color: #fff;

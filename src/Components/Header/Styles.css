@@ -1,18 +1,24 @@
+body{
+    position: relative;
+}
 .header{
     display: flex;
     justify-content: space-between;
     background-color: #202020;
-    height: 8.5vh;
-    margin: 0px 10px;
+    height: 3.8rem;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
 }
 
 .header_left, .Header_Right{
-display: flex;
-align-items: center;
+    display: flex;
+    align-items: center;
 }
 
 .Header_Logo{
     width: 100px;
+    cursor: pointer;
 }
 
 .Header_MenuIcons{
@@ -34,7 +40,7 @@ align-items: center;
 
 .Header_input{
     width: 50%;
-    height: 32px;
+    height: 40px;
     background-color: #121212;
     padding-left: 10px;
     outline: none;
@@ -42,10 +48,11 @@ align-items: center;
     border-right: none;
     font-size: 16px;
     color: white;
+    border-radius: 2px;
 }
 
 .Header_btn{
-    height: 33.7px;
+    height: 40px;
     background-color: #313131 !important;
     border-radius: 0 !important;
 }
@@ -88,21 +95,6 @@ align-items: center;
     border-radius: 50%;
     width: 30px;
     height: 30px;
-}
-
-.home_camera{
-    width: 17px !important;
-    height: 17px !important;
-    margin: 4px;
-    box-sizing: 0px 1px 1px 0 rgba(72, 71, 71, 0.342),
-    0px 1px 3px 1px rgba(65,69,73,0.15);
-    border-radius: 50%;
-    padding: 5px;
-    cursor: pointer;
-}
-
-.home_camera:hover{
-    color: #b2b2ffad;
 }
 
 .home_text{
