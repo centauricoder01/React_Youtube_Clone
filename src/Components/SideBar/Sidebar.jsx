@@ -29,12 +29,12 @@ const Sidebar = () => {
         </div>
 
         <div className="Sidebar_btn">
-          <Whatshot className="Sidebar_icon" />
+          <Whatshot className="Sidebar_icon" onClick={HomeRedirect} />
           <p>Trending</p>
         </div>
 
         <div className="Sidebar_btn">
-          <Subscriptions className="Sidebar_icon" />
+          <Subscriptions className="Sidebar_icon" onClick={HomeRedirect} />
           <p>Subscriptions</p>
         </div>
       </div>
@@ -43,22 +43,22 @@ const Sidebar = () => {
 
       <div className="Sidebar_button bottom">
         <div className="Sidebar_btn">
-          <VideoLibrary className="Sidebar_icon" />
+          <VideoLibrary className="Sidebar_icon" onClick={HomeRedirect} />
           <p>Library</p>
         </div>
 
         <div className="Sidebar_btn">
-          <Restore className="Sidebar_icon" />
+          <Restore className="Sidebar_icon" onClick={HomeRedirect} />
           <p>History</p>
         </div>
 
         <div className="Sidebar_btn">
-          <OndemandVideo className="Sidebar_icon" />
+          <OndemandVideo className="Sidebar_icon" onClick={HomeRedirect} />
           <p>Your Videos</p>
         </div>
 
         <div className="Sidebar_btn">
-          <WatchLater className="Sidebar_icon" />
+          <WatchLater className="Sidebar_icon" onClick={HomeRedirect} />
           <p>Watch Later</p>
         </div>
       </div>
