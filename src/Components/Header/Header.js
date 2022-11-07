@@ -45,6 +45,7 @@ const Header = () => {
 
   const HandleInputValue = ()=>{
     console.log(SearchData)
+    Navigaters("/searchvideo")
   }
 
 

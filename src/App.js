@@ -6,6 +6,7 @@ import {
 } from "react-router-dom";
 import PrivateRoutes from "./Authentication/PrivateRoutes";
 import "./index.css"
+import SearchVideo from "./Components/Searched_Video/Search_Video";
 const App = () => {
   return (
         <Routes>
@@ -19,6 +20,7 @@ const App = () => {
           } />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<SignUp />}/>
+          <Route path="/searchvideo" element={<SearchVideo />}/>
           <Route path="/watch" element={
             <PrivateRoutes>
               <div className="Home">
