@@ -63,7 +63,7 @@ As you already know what YouTube is, I have just tried to implement a little bit
 
 <br />
 
-## Glimpses of NIFTY-CLONE 🙈 :
+## Glimpses of YOUTUBE-CLONE 🙈 :
 <table>
   <tr>
      <td><img src="https://user-images.githubusercontent.com/103047446/214368526-f583a54c-6f84-486b-8c07-636552ba3dd9.png" alt="signup" /></td>
