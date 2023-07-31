@@ -4,13 +4,7 @@ import Sidebar from "../SideBar/Sidebar";
 import "./Search_Video.css";
 
 const Search_Video = () => {
-  return (
-    <div>
-      <Header />
-      <Sidebar />
-      <h1>Hello world </h1>
-    </div>
-  );
+  return <div></div>;
 };
 
 export default Search_Video;

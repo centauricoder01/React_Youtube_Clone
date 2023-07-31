@@ -1,7 +1,7 @@
 import axios from "axios";
 
 export const FetchingData = () => {
-  return axios.get`https://www.googleapis.com/youtube/v3/videos?part=snippet&chart=mostPopular&key=AIzaSyB9XbyPZGtnp09wESePbsQ2lAvrUEMM_t4&maxResults=50&regionCode=IN`;
+  return axios.get`https://www.googleapis.com/youtube/v3/videos?part=snippet&chart=mostPopular&key=AIzaSyBzcGk_6G2-f7RCNYcmVN4BC7dgoqF56FI&maxResults=50&regionCode=IN`;
 };
 
 export const SettingVideoData = () => {};
